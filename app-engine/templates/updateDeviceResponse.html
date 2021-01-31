@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}修改結果{% endblock %}
+{% block content %}
+<h1 class="title">{{deviceModel['result']['title']}}</h1>
+
+    <form action="" method="post" name="updateDevice">
+      <div class="field">
+        <label for="裝置" class="label">裝置:{{deviceModel['deviceModel']['device']}}</label>
+      </div>
+
+      <div class="field">
+        <label for="管理員" class="label">管理員:{{deviceModel['deviceModel']['staff']}}</label>
+      </div>
+
+      <div class="field">
+        <label for="使用者" class="label">使用者: {{deviceModel['deviceModel']['customer']}}</label>
+      </div>
+        
+      <div class="field">
+        <label for="rssi" class="label">rssi: {{deviceModel['deviceModel']['rssi']}}</label>
+      </div>
+    </form>
+{% endblock %}

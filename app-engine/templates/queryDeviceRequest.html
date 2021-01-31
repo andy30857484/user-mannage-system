@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>裝置查詢</title>
+</head>
+
+<body>
+    {% extends "layout.html" %}
+    {% block title %}查詢{% endblock %}
+    {% block content %}
+    <h1 class="title">查詢</h1>
+
+    <form action="" method="POST" name="queryDevice" id="test_form">
+
+        <div class="field">
+            <label for="管理員" class="label">管理員</label>
+            <div class="control">
+                <input type="text" name="staff" class="input" required="required" />
+            </div>
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-primary is-small">查詢</button>
+            </div>
+        </div>
+    </form>
+    {% endblock %}
+</body>
+
+</html>

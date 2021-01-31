@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}修改裝置{% endblock %}
+{% block content %}
+    <h1 class="title">修改</h1>
+
+    <form action="" method="post" name="updateDevice">
+      <div class="field">
+        <label for="裝置" class="label">裝置</label>
+        <div class="control">
+          <input type="text" name="device" class="input" value="{{deviceModel['deviceModel']['device']}}" required="required"/>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="管理員" class="label">管理員:{{deviceModel['deviceModel']['staff']}}</label>
+        <input type="hidden" name="staff" class="input" value="{{deviceModel['deviceModel']['staff']}}" required="required" readonly="" />
+      </div>
+
+      <div class="field">
+        <label for="使用者" class="label">使用者</label>
+        <div class="control">
+          <input type="text" name="customer" class="input" value="{{deviceModel['deviceModel']['customer']}}" required="required"/>
+        </div>
+      </div>
+        
+      <div class="field">
+        <label for="rssi" class="label">rssi</label>
+        <div class="control">
+          <input type="text" name="rssi" class="input" value="{{deviceModel['deviceModel']['rssi']}}" required="required"/>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary is-small">修改</button>
+        </div>
+      </div>
+    </form>
+{% endblock %}

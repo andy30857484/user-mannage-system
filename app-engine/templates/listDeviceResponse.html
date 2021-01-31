@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>裝置列表</title>
+</head>
+
+<body>
+    {% extends "layout.html" %}
+    {% block title %}裝置列表{% endblock %}
+    {% block content %}
+    <h1 class="title">{{deviceModel['result']['title']}}</h1>
+
+    <div id="dmsList">
+        <table>
+            <thead>
+                <tr>
+                    <th>裝置</th>
+                    <th>管理員</th>
+                    <th>使用者</th>
+                    <th>rssi</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in range(length)%}
+                <tr>
+                    <td>{{deviceModel['deviceModel'][i]['device']}}</td>
+                    <td>{{deviceModel['deviceModel'][i]['staff']}}</td>
+                    <td>{{deviceModel['deviceModel'][i]['customer']}}</td>
+                    <td>{{deviceModel['deviceModel'][i]['rssi']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+
+
+    {% endblock %}
+</body>
+
+</html>
